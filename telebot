@@ -1,0 +1,10 @@
+#!/bin/bash
+PROCESSPID=$(pgrep bot-simple.py);
+echo $PROCESSPID
+if [ -z "$PROCESSPID" ]; then
+/opt/bot-simple.py &
+echo "restarted"
+else
+echo "ok"
+fi
+exit
